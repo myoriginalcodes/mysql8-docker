@@ -1,0 +1,21 @@
+###############################################################################
+#                          MySQL Full Environment                             #
+###############################################################################
+version: '3.9'
+
+services:
+
+    mysql8:
+        container_name: mysql8-myoriginalcodes
+        build: ./docker
+        restart: unless-stopped
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_TCP_PORT: ${MYSQL_TCP_PORT}
+        ports:
+            - "${MYSQL_EXTERNAL_PORT}:${MYSQL_TCP_PORT}"
+        volumes:
+            - "${MYSQL_LOGS_VOLUME}:/var/log/mysql"
+            - "${MYSQL_CONF_FILE}:/etc/mysql/conf.d/docker.cnf"
+            - "${MYSQL_SCRIPTS_VOLUME}:/docker-entrypoint-initdb.d/"
+            - "${MYSQL_DATA_VOLUME}:/var/lib/mysql"
