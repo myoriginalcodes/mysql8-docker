@@ -1,0 +1,20 @@
+{
+    "name": "myoriginalcodes/mysql8-docker",
+    "version": "0.0.1-dev",
+    "description": "PHP fpm docker container",
+    "keywords": ["mysql", "mysql8", "docker"],
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edson Nascimento",
+            "email": "theoriginal@myoriginalcodes.com",
+            "role": "developer",
+            "homepage": "https://myoriginalcodes.com"
+        }
+    ],
+    "support": {
+        "email": "theoriginal@myoriginalcodes.com"
+    },
+    "minimum-stability": "stable"
+}
